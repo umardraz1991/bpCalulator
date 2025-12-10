@@ -47,5 +47,20 @@ namespace BPCalculator
                     return BPCategory.High;
             }
         }
+
+        public string HealthAdvice
+        {
+            get
+            {
+                return Category switch
+                {
+                    BPCategory.Low => "Your blood pressure is low. Stay hydrated and consult a doctor if you feel dizzy.",
+                    BPCategory.Ideal => "Your blood pressure is ideal. Keep maintaining a healthy lifestyle.",
+                    BPCategory.PreHigh => "Your blood pressure is slightly high. Consider reducing salt and exercising.",
+                    BPCategory.High => "Your blood pressure is high. Please consult a healthcare professional immediately.",
+                    _ => ""
+                };
+            }
+        }
     }
 }

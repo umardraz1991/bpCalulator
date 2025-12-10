@@ -22,6 +22,10 @@
                 <input asp-for="BP.Diastolic" class="form-control" />
                 <span asp-validation-for="BP.Diastolic" class="text-danger"></span>
             </div>
+            @if (Model.BP != null)
+            {
+                <p><strong>Health Advice:</strong> @Model.BP.HealthAdvice</p>
+            }
             <div class="form-group">
                 <input type="submit" value="Submit" class="btn btn-default" />
             </div>
