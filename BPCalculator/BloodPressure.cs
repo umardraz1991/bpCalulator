@@ -28,7 +28,7 @@ namespace BPCalculator
         [Range(DiastolicMin, DiastolicMax, ErrorMessage = "Invalid Diastolic Value")]
         public int Diastolic { get; set; }                      // mmHG
 
-        // calculate BP category
+        // calculate BP category...
         public BPCategory Category
         {
             get
